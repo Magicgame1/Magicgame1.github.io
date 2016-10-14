@@ -33,28 +33,41 @@
 /* navagation_bar */
         li {font-family: sans-serif; background-color: white}
         #section_1 {
-            border-top: 1px solid black; background-color: white
+            background-color: white
         }
         h2 {
-          padding-top: 10px; padding-left: 100px;
+            padding-top: 10px; 
+            padding-left: 100px;
         }
         body {
             background-color: white;
         }
         #come_for_a_soak {
-            padding-top: 20px; background-color: #0284ff; float: right; margin-top: 1px; border-bottom: solid black 3px;
+            padding-top: 20px; 
+            background-color: #0284ff; 
+            float: right; 
+            margin-top: 0px; 
+            border-bottom: solid black 3px; 
+            margin-left: 1px
         }
         #campground_and_hostel {
-            padding-top: 20px; float: left; margin-right: 5px; background-color: #0284ff; border-bottom: solid black 3px;
+            position: absolute;
+            color: white;
+            margin-top: -600px;
         }
         #news {
-            padding-top: 20px; float: right; margin-right: 5px; background-color: #0284ff; border-bottom: solid black 3px;
-        }
-        #ch_image {
-            float: left; border: solid #0284ff 5px; resize: both; width: 580px; position: relative; top: 4px; box-shadow: 1px 1px 10px #00daf7
+            padding-top: 20px; 
+            float: right; 
+            margin-right: 5px; 
+            background-color: #0284ff; 
+            border-bottom: solid black 3px;
         }
         #cfas_image {
-            float: right;border: solid #0284ff 5px; resize: both; width: 510px; position: relative; display: block; vertical-align: top
+            float: right; 
+            position: relative; 
+            top: 10px; 
+            right: 10px; 
+            display: block; 
         }
         .header {
             font-size: 60px; 
@@ -63,22 +76,27 @@
             font-size: 29px;
         } 
         #cht_and_p {
-            background-color: white; border: solid #0284ff 5px;
+            background-color: white; 
         }
         #cfas_paragraph {
-            background-color: white; margin-left: 7px;
+            background-color: white; 
+            margin-left: 7px; 
         }
         #ns_p {
-            background-color: white; margin-left: 7px;
+            background-color: white; 
+            margin-left: 7px;
         }
-        #combo_one {
-            border: solid #0284ff 5px;
+        #img_ch {
+            width: 100%;
+            height: 625px;
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://takhinihotpools.com/static/img/Takhini-Hot-Springs-0098.png'), no-repeat;
+            overflow: hidden
         }
         #ch_p {
-            
-        }
-        #cfas_and_p {
-            background-color: white; border: solid #0284ff 5px;
+            position: relative;
+            color: white;
+            margin-top: -510px;
+            margin-right: -50px;
         }
 </style>
     <title>Takhini Hot Springs</title>
@@ -97,7 +115,7 @@
             </ul>
         </nav></div>
 <!--- navagation_bar --->
-        <img src="http://takhinihotpools.com/static/img/winter-banner.jpg" width="1348">
+       <img src="http://takhinihotpools.com/static/img/winter-banner.jpg" width="1348">
     <div id="section_1">
     <div id="news">
             <p class="header">News<p></div>
@@ -106,9 +124,8 @@
     Yukon Escape Games. If you are looking for a fun activity on the property 
     then come check them out!<br><br></div>
     </p> 
-    <div id="combo_one">
     <div id="cfas_image">
-        <img src="http://en.destinationcanada.com/sites/default/files/imagecache/fullstory_image_465w/image/story_ideas/10_spas_takhini.jpg" width="550px" style="margin-left: 7px;"></div>
+        <img src="http://en.destinationcanada.com/sites/default/files/imagecache/fullstory_image_465w/image/story_ideas/10_spas_takhini.jpg" width="572px" style="margin-left: 7px;"></div>
     <div id="cfas_and_p">
     <div id="come_for_a_soak">
             <p class="header">Come for a soak!</p></div>
@@ -116,13 +133,13 @@
             <p class="paragraph"><br>Takhini Hot Pools is one of the most visited locations in the Yukon. 
 The hot springs have been in operation for over 100 years. Our hot springs 
 pools are a relaxing 36° and 42° Celsius, with water entering the pool at 47 
-degrees. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.</p></div></div>
+degrees. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.<br><br><br><br></p></div></div>
             <p style="clear:both"></p>
-    <div id="ch_image"><img src="http://takhinihotpools.com/static/img/Takhini-Hot-Springs-0098.png" width="580px" style="float:left; margin-right: 7px; margin-bottom: 5px;"></div>
     <div id="cht_and_p">
+        <div id="img_ch"></div>
         <div id="campground_and_hostel">
-            <p class="header">Campground and Hostel</p></div>
+            <article><p class="header">Campground and Hostel</p></article></div>
     <div id="ch_p">
-            <p class="paragraph"><br>The hostel is located only a 30 second walk away from the hot springs. It is brand new and has only been in operation for 1 year. Our forested campground, behind the hostel, provides excellent northern lights viewing. The edge-of-the-wilderness location provides access to trails for walking, biking, snow-shoeing and cross-country skiing. All guests from the hostel and campground receive a 20% discount at the hot springs<br></p></div></div>
+            <p class="paragraph">The hostel is located only a 30 second walk away from the hot springs. It is brand new and has only been in operation for 1 year. Our forested campground, behind the hostel, provides excellent northern lights viewing. The edge-of-the-wilderness location provides access to trails for walking, biking, snow-shoeing and cross-country skiing. All guests from the hostel and campground receive a 20% discount at the hot springs</p></div></div>
 </body>
 </html>
