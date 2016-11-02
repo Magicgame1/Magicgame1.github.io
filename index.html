@@ -1,136 +1,166 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Takhini Hot Springs</title>
     <meta charset="utf-8">
-    <style>    
-/*#44217a, #3da077, #235784, #0d72a5, white, and #0d12a5*/
-/*style="float:left; margin-right: 7px; margin-bottom: 5px; border: solid black 3px;"*/
-/* navagation_bar */
-        * {margin:0; padding:0;
+</head>
+    <style>
+        /* color theme: #44217a, #3da077, #235784, #0d72a5, white, and #0d12a5 */
+        body {
+            font-family: sans-serif;
         }
-        li {font-size: 23px
-        }
-        nav li {
-            float: right; background-color: white; font-size: 30;
-        }
-        nav ul {list-style: none; 
-        }
-        nav a {
-            text-decoration: none;
-            color: #0284ff;
-          display: block; text-align: center; padding: 10px 42.7px;
-      }
-            nav li a:hover{
-                background-color: lightgray;
-            }
-        #header {
-            float: left;
-            margin: 0;
-            padding: 0;
-        }
-        nav {margin-top: 15px}
-        #nav_bar {background-color: #ffffe6;
-        }
-/* navagation_bar */
-        li {font-family: sans-serif; background-color: white}
         h2 {
-            padding-top: 10px; 
-            padding-left: 100px;
+            font-size: 2.4em;
+            font-weight: 100;
         }
-        #come_for_a_soak {
-            padding-top: 20px; 
-            background-color: transparent; 
-            float: left; 
-            margin-top: 0px;
-            margin-left: 30px;
+        p {
+            font-size: 1.6em;
+        }
+        #news_button {
+            text-decoration: none;
+            color: black;
+            border: solid double groove black 1px;
+            border-style: solid double groove;
+            padding: 4px;
+            font-size: 1.7em
+        }
+        #img_campground_and_hostel {
+            -webkit-filter: brightness(40%);
+            filter: brightness(40%);
             width: 100%;
-            text-align: left;
-            position: absolute;
-            color: black;
+            height: auto;
         }
-        #campground_and_hostel {
-            position: absolute;
-            color: black;
-            margin-top: -600px;
+        #h_campgrounds_and_hostel {
+            color: darkblue;
+            width: 100%;
+            top: 80px
         }
-        #news {
-
-            float: right; 
-            margin-right: 5px; 
-            background-color: #0284ff; 
-            border-bottom: solid black 3px;
-        }
-        #cfas_img {
-            float: left;
-            top: 1200px;
-            width: 40%;
-        }
-        .header {
-            font-size: 60px; 
-        }
-        .paragraph {
-            font-size: 29px;
-        } 
-        #cht_and_p {
-            background-color: white; 
-        }
-        #cfas_paragraph {
-            background-color: #235784; 
-            float: right;
-            border-top: solid black 1px;
-            color: white;
-        }
-        #ns_p {
-            background-color: #00daf7; 
-            margin-left: 0px;
+        .campground_and_hostel_image {
+            position: relative;
             width: 100%
         }
-        #img_ch {
-            width: 100%;
-            height: 625px;
-            overflow: hidden;
-            filter: brightness (50%);
+        .header {
+            font-size: 2.4em;
+            font-weight: 100;
         }
-        #ch_p {
+        #balzam_cafe {
+            width: 45%;
+            max-height: 200px;
+            -webkit-filter: brightness(90%);
+            filter: brightness(90%);
+            margin-left: 10px;
+        }
+        #yukon_wl_preserve {
+            width: 45%;
+            max-height: 200px;
+            margin-right: 10px;
+        }
+        #local_businesses {
+            background-color: #6bba9a;
+        }
+        #lb_paragraph {
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+        }
+        ul.img-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0px;
+            text-align: center;
+}
+
+        ul.img-list li {
+            display: inline-block;
+            margin: 0 1em 1em 0;
             position: relative;
-            color: black;
-            margin-top: -510px;
+            width: 100%;
+            height: 100%;
+}
+        span.text-content {
+            background: rgba(0,0,0,0.5);
+            color: white;
+            cursor: pointer;
+            display: table;
+            left: 0;
+            position: absolute;
+            top: 0;
+}
+
+        span.text-content span {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+}
+        span.text-content {
+            background: rgba(0,0,0,0.5);
+            color: white;
+            cursor: pointer;
+            display: table;    
+            left: 0;
+            position: absolute;
+            top: 0;
+            opacity: 0;
         }
-</style>
-    <title>Takhini Hot Springs</title>
+        span.text-content {
+            background: rgba(0,0,0,0.5);
+            color: white;
+            cursor: pointer;
+            display: table;
+            left: 0;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            -webkit-transition: opacity 500ms;
+            -moz-transition: opacity 500ms;
+            -o-transition: opacity 500ms;
+            transition: opacity 500ms;
+        }
+        span {
+            font-size: 1.4em;
+        }
+        #balzam_cafe_img {
+            width: 70%;
+        }
+        #teal_line {
+            background-color: #3da077;
+        }
+
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+    </style>    
 <body>
-<!--- navagation_bar --->
-        <div id="nav_bar">
-        <div id="header">
-            <img src="http://takhinihotpools.com/static/img/Takhini-Hot-Pools-Logo-15.png"></div>
-        <nav>
-            <ul>
-                <li class="nav_tab"> <a href="Contact.html">Contact</li></a>
-                <li class="nav_tab"> <a href="Activities_Local_Attractions.html">Activities/Local Attractions</li></a>
-                <li class="nav_tab"> <a href="New.html">News</li></a>
-                <li class="nav_tab"> <a href="History.html">History</li></a>
-                <li class="nav_tab"> <a href="About.html">About</li></a>
-            </ul>
-        </nav></div>
-<!--- navagation_bar --->
-       <img src="http://takhinihotpools.com/static/img/winter-banner.jpg" width="100%">
-    <div id="news">
-            <p class="header">News<p></div>
-    <div id="ns_p">
-            <p class="paragraph"><br>Come check out the new business on the property, 
-    Yukon Escape Games. If you are looking for a fun activity on the property 
-    then come check them out!<br><br></div>
-    </p>
-    <div id="come_for_a_soak">
-            <p class="header">Come for a soak!</p></div>
-            <p class="paragraph" id="cfas_paragraph"><img id="cfas_img" src="http://en.destinationcanada.com/sites/default/files/imagecache/fullstory_image_465w/image/story_ideas/10_spas_takhini.jpg" width="50%" style="float: left; margin: 0px 20px;"><br><br>Takhini Hot Pools is one of the most visited locations in the Yukon. 
-The hot springs have been in operation for over 100 years. Our hot springs 
-pools are a relaxing 36° and 42° Celsius, with water entering the pool at 47 
-degrees. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.<br><br></p>
-    <div id="cht_and_p">
-            <img id="img_ch" src="http://takhinihotpools.com/static/img/Takhini-Hot-Springs-0098.png">
-        <div id="campground_and_hostel">
-            <p class="header">Campground and Hostel</p></div>
-    <div id="ch_p">
-            <p class="paragraph">The hostel is located only a 30 second walk away from the hot springs. It is brand new and has only been in operation for 1 year. Our forested campground, behind the hostel, provides excellent northern lights viewing. The edge-of-the-wilderness location provides access to trails for walking, biking, snow-shoeing and cross-country skiing. All guests from the hostel and campground receive a 20% discount at the hot springs</p></div></div>
+    <!----- Framework ----->
+    <h2>News</h2>
+        <p>Come check out the new business on the property, Yukon Escape Games. If you are looking for a fun activity on the property then come check them out!</p> <article><a id="news_button" href="https://www.google.ca/">Button</a></article>
+    <h2>Come for a Soak</h2>
+        <p>Takhini Hot Pools is one of the most visited locations in the Yukon. The hot springs have been in operation for over 100 years. Our hot springs pools are a relaxing 36° and 42° Celsius, with water entering the pool at 47 degrees. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.</p><img src="http://hotspringsguide.net/wp-content/uploads/2013/11/Takhini-at-Night-300px-Photo-Courtesy-of-Takhini-Hot-Springs.jpg">
+    <div class="campground_and_hostel_image"><p id="h_campgrounds_and_hostel" class="header">Campgrounds and Hostel</p>
+        <p>The hostel is located only a 30 second walk away from the hot springs. It is brand new and has only been in operation for 1 year. Our forested campground, behind the hostel, provides excellent northern lights viewing. The edge-of-the-wilderness location provides access to trails for walking, biking, snow-shoeing and cross-country skiing. All guests from the hostel and campground receive a 20% discount at the hot springs</p>
+        <img id="img_campground_and_hostel" src="http://i.cbc.ca/1.1556624.1379047164!/httpImage/image.jpg_gen/derivatives/16x9_1180/hi-takhini-hot-springs.jpg"></div>
+    <div id="local_businesses"><br><h2><center>Local Businesses</center></h2><br></div>
+        <ul class="img-list">
+            <li>
+                <a href="http://www.cafebalzam.com/">
+                    <img id="balzam_cafe_img" src="http://www.yukonwildlife.ca/Images/cafe%20balzam.png"/>
+                        <span class="text-content"><span><br><br><br>Are you hungry? Cafe Balzam (located beside Takhini Hot Pools) specializes in sweet and savory crepes as well as gourmet poutines; everything is organic and locally grown/raised. There is a ton of things to do in the area. See you soon!<br><br><br><br></span></span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.cafebalzam.com/">
+                    <img id="balzam_cafe_img" src="http://www.yukoninfo.com/wp-content/uploads/2014/04/Wildlife-Preserve-Logo-with-stroke.png"/>
+                        <span class="text-content"><span><br><br><br><br>Want to see northern animals? Go to the Yukon Wildlife Preserve for guaranteed wildlife viewing; you can walk at your own pace for a self-guided tour, or take a vehicle and have a guide show you around. <br><br><br><br></span></span>
+                </a>
+            </li>
+        </ul>
+    <div id="teal_line"><br></div>
+    <h2>Location</h2>
+        <p>Takhini Hot Springs is only 28 kilometres (18 miles) from downtown Whitehorse. The highways taking you to the hot springs are the Alaska Highway and the North Klondike Highway. Both are paved, two-lane highways, open year  round. Takhini Hot Springs is at the end of the Hot Springs Road, 10 kilometres (6miles)from the turn off the North Klondike Highway. The trip to the hot springs from downtown Whitehorse or the Whitehorse international airport takes about 25 minutes.
+        For information on getting to Whitehorse and the Yukon, check out www.travelyukon.com</p>
+        <p>*google map*</p>
+    <h2>Gallery</h2>
+        <p>*pictures*</p>
+    <!----- Framework ----->
 </body>
 </html>
