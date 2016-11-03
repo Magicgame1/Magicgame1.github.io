@@ -25,19 +25,15 @@
             font-size: 1.7em
         }
         #img_campground_and_hostel {
-            -webkit-filter: brightness(40%);
-            filter: brightness(40%);
-            width: 100%;
-            height: auto;
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://i.cbc.ca/1.1556624.1379047164!/httpImage/image.jpg_gen/derivatives/16x9_1180/hi-takhini-hot-springs.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 10em;
         }
         #h_campgrounds_and_hostel {
-            color: darkblue;
+            color: white;
             width: 100%;
             top: 80px
-        }
-        .campground_and_hostel_image {
-            position: relative;
-            width: 100%
         }
         .header {
             font-size: 2.4em;
@@ -65,7 +61,7 @@
         }
         ul.img-list {
             list-style-type: none;
-            margin: 0;
+            margin: 0px;
             padding: 0px;
             text-align: center;
 }
@@ -125,20 +121,45 @@
         #teal_line {
             background-color: #3da077;
         }
+        #google_map {
+            float: left;
+            right: 10px;
+        }
+        #location_paragraph {
+            float: right;
+            width: 48%;
+            color: lightgray;
+        }
+        #location_sec {
+            background-color: #063146;
+        }
+        #location {
+            color: lightgray;
+        }
 
-ul.img-list li:hover span.text-content {
-  opacity: 1;
+        ul.img-list li:hover span.text-content {
+            opacity: 1;
 }
+        #img_come_for_a_soak {
+            float: right
+        }
+        #cfas_paragraph {
+            float: left
+        }
+        #cfas {
+            top: 100px;
+        }
+        
     </style>    
 <body>
     <!----- Framework ----->
     <h2>News</h2>
         <p>Come check out the new business on the property, Yukon Escape Games. If you are looking for a fun activity on the property then come check them out!</p> <article><a id="news_button" href="https://www.google.ca/">Button</a></article>
     <h2>Come for a Soak</h2>
-        <p>Takhini Hot Pools is one of the most visited locations in the Yukon. The hot springs have been in operation for over 100 years. Our hot springs pools are a relaxing 36° and 42° Celsius, with water entering the pool at 47 degrees. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.</p><img src="http://hotspringsguide.net/wp-content/uploads/2013/11/Takhini-at-Night-300px-Photo-Courtesy-of-Takhini-Hot-Springs.jpg">
-    <div class="campground_and_hostel_image"><p id="h_campgrounds_and_hostel" class="header">Campgrounds and Hostel</p>
-        <p>The hostel is located only a 30 second walk away from the hot springs. It is brand new and has only been in operation for 1 year. Our forested campground, behind the hostel, provides excellent northern lights viewing. The edge-of-the-wilderness location provides access to trails for walking, biking, snow-shoeing and cross-country skiing. All guests from the hostel and campground receive a 20% discount at the hot springs</p>
-        <img id="img_campground_and_hostel" src="http://i.cbc.ca/1.1556624.1379047164!/httpImage/image.jpg_gen/derivatives/16x9_1180/hi-takhini-hot-springs.jpg"></div>
+        <div id="cfas"><div id="cfas_paragraph"><p>Takhini Hot Pools is one of the most visited locations in the Yukon. The hot springs have been in operation for over 100 years. Our hot springs pools are a relaxing 36° and 42° Celsius, with water entering the pool at 47 degrees. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.</p></div><div id="img_come_for_a_soak"><img src="http://hotspringsguide.net/wp-content/uploads/2013/11/Takhini-at-Night-300px-Photo-Courtesy-of-Takhini-Hot-Springs.jpg" width="48%"></div></div>
+        <div id="img_campground_and_hostel">
+        <p id="h_campgrounds_and_hostel" class="header">Campgrounds and Hostel</p>
+        <br><br><br><p style="color: white;">The hostel is located only a 30 second walk away from the hot springs. It is brand new and has only been in operation for 1 year. Our forested campground, behind the hostel, provides excellent northern lights viewing. The edge-of-the-wilderness location provides access to trails for walking, biking, snow-shoeing and cross-country skiing. All guests from the hostel and campground receive a 20% discount at the hot springs</p><br><br><br></div>
     <div id="local_businesses"><br><h2><center>Local Businesses</center></h2><br></div>
         <ul class="img-list">
             <li>
@@ -150,15 +171,28 @@ ul.img-list li:hover span.text-content {
             <li>
                 <a href="http://www.cafebalzam.com/">
                     <img id="balzam_cafe_img" src="http://www.yukoninfo.com/wp-content/uploads/2014/04/Wildlife-Preserve-Logo-with-stroke.png"/>
-                        <span class="text-content"><span><br><br><br><br>Want to see northern animals? Go to the Yukon Wildlife Preserve for guaranteed wildlife viewing; you can walk at your own pace for a self-guided tour, or take a vehicle and have a guide show you around. <br><br><br><br></span></span>
+                        <span class="text-content"><span><br><br><br>Want to see northern animals? Go to the Yukon Wildlife Preserve for guaranteed wildlife viewing; you can walk at your own pace for a self-guided tour, or take a vehicle and have a guide show you around. <br><br><br><br><br></span></span>
                 </a>
             </li>
         </ul>
-    <div id="teal_line"><br></div>
-    <h2>Location</h2>
-        <p>Takhini Hot Springs is only 28 kilometres (18 miles) from downtown Whitehorse. The highways taking you to the hot springs are the Alaska Highway and the North Klondike Highway. Both are paved, two-lane highways, open year  round. Takhini Hot Springs is at the end of the Hot Springs Road, 10 kilometres (6miles)from the turn off the North Klondike Highway. The trip to the hot springs from downtown Whitehorse or the Whitehorse international airport takes about 25 minutes.
-        For information on getting to Whitehorse and the Yukon, check out www.travelyukon.com</p>
-        <p>*google map*</p>
+    <div id="teal_line"><br><br></div>
+    <div id="location_sec"><h2 id="location"><center>Location</center></h2>
+        <div id="location_paragraph"><p>Takhini Hot Springs is only 28 kilometres (18 miles) from downtown Whitehorse. The highways taking you to the hot springs are the Alaska Highway and the North Klondike Highway. Both are paved, two-lane highways, open year  round. Takhini Hot Springs is at the end of the Hot Springs Road, 10 kilometres (6miles)from the turn off the North Klondike Highway. The trip to the hot springs from downtown Whitehorse or the Whitehorse international airport takes about 25 minutes.
+        For information on getting to Whitehorse and the Yukon, check out www.travelyukon.com</p></div>
+    <div id="map" style="width:50%;height:500px"></div>
+    <div id="google_map">
+    <script>
+        function myMap() {
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {
+            center: new google.maps.LatLng(51.5, -0.2),
+            zoom: 10
+}
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+        </script></div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script><br><br></div>
     <h2>Gallery</h2>
         <p>*pictures*</p>
     <!----- Framework ----->
