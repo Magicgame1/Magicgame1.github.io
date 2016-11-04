@@ -6,6 +6,10 @@
 </head>
     <style>
         /* color theme: #44217a, #3da077, #235784, #0d72a5, white, and #0d12a5 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: sans-serif;
         }
@@ -18,11 +22,14 @@
         }
         #news_button {
             text-decoration: none;
-            color: black;
+            color: white;
             border: solid double groove black 1px;
             border-style: solid double groove;
             padding: 4px;
-            font-size: 1.7em
+            font-size: 1.7em;
+            margin: 10px;
+            position: relative;
+            bottom: 10px;
         }
         #img_campground_and_hostel {
             background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://i.cbc.ca/1.1556624.1379047164!/httpImage/image.jpg_gen/derivatives/16x9_1180/hi-takhini-hot-springs.jpg');
@@ -111,50 +118,83 @@
             -moz-transition: opacity 500ms;
             -o-transition: opacity 500ms;
             transition: opacity 500ms;
-        }
+            }
         span {
             font-size: 1.4em;
-        }
+            }
         #balzam_cafe_img {
             width: 70%;
-        }
+            }
         #teal_line {
             background-color: #3da077;
-        }
+            }
         #google_map {
             float: left;
             right: 10px;
-        }
+            }
         #location_paragraph {
             float: right;
             width: 48%;
-            color: lightgray;
-        }
+            color: white;
+            text-align: center;
+            }
         #location_sec {
             background-color: #063146;
-        }
+            }
         #location {
-            color: lightgray;
-        }
+            color: white;
+            }
 
         ul.img-list li:hover span.text-content {
             opacity: 1;
-}
-        #cfas {
-            top: 100px;
+            }
+        #cfas_paragraph {
+            float: right;
+            width: 48%;
+            margin-right: 0px;
+            color: white;
+            text-align: center;
+            }
+        #cfas_sec{
+            background-color: #063146; 
+            }
+        #come_for_a_soak {
+            color: white;
         }
-        
+        #news {
+            color: white;
+        }
+        #news_sec {
+            background-color: #6bba9a;
+        }
+        #news_paragraph {
+            color: white;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        #local_businesses {
+            color: white;
+        }
+        #teal_bkgrd {
+            background-color: #6bba9a;
+        }
+        #gif {
+            width: 100%;
+        }
     </style>    
 <body>
     <!----- Framework ----->
-    <h2>News</h2>
-        <p>Come check out the new business on the property, Yukon Escape Games. If you are looking for a fun activity on the property then come check them out!</p> <article><a id="news_button" href="https://www.google.ca/">Button</a></article>
-    <h2>Come for a Soak</h2>
-        <div id="cfas"><div id="cfas_paragraph"><p>Takhini Hot Pools is one of the most visited locations in the Yukon. The hot springs have been in operation for over 100 years. Our hot springs pools are a relaxing 36° and 42° Celsius, with water entering the pool at 47 degrees. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.</p></div><div id="img_come_for_a_soak"><img src="http://hotspringsguide.net/wp-content/uploads/2013/11/Takhini-at-Night-300px-Photo-Courtesy-of-Takhini-Hot-Springs.jpg" width="48%"></div></div>
+    <img id="gif" src="http://66.media.tumblr.com/c97e72c823008b1b59ee5f691a9ceda7/tumblr_nltc33drY61rx5rfmo1_1280.gif">
+    <div id="news_sec"><h2 id="news"><center>News</center></h2>
+        <p id="news_paragraph">Come check out the new business on the property, Yukon Escape Games. If you are looking for a fun activity on the property then come check them out!</p><article><a id="news_button" href="https://www.google.ca/">To Find Out More</a></article></div>
+    <div id="cfas_sec"><h2 id="come_for_a_soak"><center>Come for a Soak</center></h2>
+        <img src="http://hotspringsguide.net/wp-content/uploads/2013/11/Takhini-at-Night-300px-Photo-Courtesy-of-Takhini-Hot-Springs.jpg" width="50%%">
+        <div id="cfas_paragraph"><p>Takhini Hot Pools is one of the most visited locations in the Yukon. The hot springs have been in operation for over 100 years. Our hot springs pools are a relaxing 36° and 42° Celsius, with water entering the pool at 47 degrees. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.</p></div><br><br></div>
+        <p class="clear"></p>
         <div id="img_campground_and_hostel">
         <p id="h_campgrounds_and_hostel" class="header">Campgrounds and Hostel</p>
         <br><br><br><p style="color: white;">The hostel is located only a 30 second walk away from the hot springs. It is brand new and has only been in operation for 1 year. Our forested campground, behind the hostel, provides excellent northern lights viewing. The edge-of-the-wilderness location provides access to trails for walking, biking, snow-shoeing and cross-country skiing. All guests from the hostel and campground receive a 20% discount at the hot springs</p><br><br><br></div>
-    <div id="local_businesses"><br><h2><center>Local Businesses</center></h2><br></div>
+    <div id="local_businesses"><br><h2 id="local_businesses"><center>Local Businesses</center></h2><br></div>
         <ul class="img-list">
             <li>
                 <a href="http://www.cafebalzam.com/">
