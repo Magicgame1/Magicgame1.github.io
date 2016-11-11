@@ -133,8 +133,7 @@
             right: 10px;
             }
         #location_paragraph {
-            float: right;
-            width: 48%;
+            width: 100%;
             color: white;
             text-align: center;
             }
@@ -199,9 +198,23 @@
             width: 100%;
             min-height: 500px;
         }
-        
+        #time_button {
+            width: 100%;
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+            background-color: #063146;
+        }
+        #time_display {
+            width: 100%;
+            color: white;
+            text-align: center;
+            background-color: #063146;
+            font-size: 1.5em;
+        }
     </style>    
 <body>
+
     <!----- Framework ----->
     <h1 id="takhini_hot_springs"><center>Takhini Hot Springs</center></h1>
     <img id="gif" src="http://66.media.tumblr.com/c97e72c823008b1b59ee5f691a9ceda7/tumblr_nltc33drY61rx5rfmo1_1280.gif">
@@ -231,21 +244,13 @@
         </ul>
     <div id="teal_line"><br><br></div>
     <div id="location_sec"><h2 id="location"><center>Location</center></h2>
-        <div id="location_paragraph"><p>Takhini Hot Springs is only <u>28 kilometres (18 miles)</u> from downtown <b>Whitehorse</b>. The highways taking you to the hot springs are the Alaska Highway and the North Klondike Highway. Both are paved, two-lane highways, open year  round. Takhini Hot Springs is at the end of the Hot Springs Road, 10 kilometres (6miles)from the turn off the North Klondike Highway. The trip to the hot springs from downtown Whitehorse or the Whitehorse international airport takes about 25 minutes.
-        For information on getting to Whitehorse and the Yukon, check out www.travelyukon.com</p></div>
-    <div id="map" style="width:50%;height:500px"></div>
-    <div id="google_map">
-    <script>
-        function myMap() {
-            var mapCanvas = document.getElementById("map");
-            var mapOptions = {
-            center: new google.maps.LatLng(51.5, -0.2),
-            zoom: 10
-}
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-        </script></div>
-
+        <div id="location_paragraph"><br><p>Takhini Hot Springs is only <u>28 kilometres (18 miles)</u> from downtown <b>Whitehorse</b>. The highways taking you to the hot springs are the Alaska Highway and the North Klondike Highway. Both are paved, two-lane highways, open year  round. Takhini Hot Springs is at the end of the Hot Springs Road, 10 kilometres (6miles)from the turn off the North Klondike Highway. The trip to the hot springs from downtown Whitehorse or the Whitehorse international airport takes about 25 minutes.
+        For information on getting to Whitehorse and the Yukon, check out www.travelyukon.com</p><br><br></div>
+                <button id="time_button" type="button"
+                 onclick="document.getElementById('time_display').innerHTML = Date()">
+                Your Current Date and Time.</button>
+        <h2 id="time_display"></h2>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1941.6691646376767!2d-135.36046068434712!3d60.87897159285619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x51546f2b050d8607%3A0xd71f4bff3c8fb1a5!2sTakhini+Hot+Springs!5e0!3m2!1sen!2sca!4v1478628110261" frameborder="0" style="border:0" allowfullscreen></iframe>
         <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script><br><br></div>
     <h2 id="gallery"><center>Gallery</center></h2>
         <table>
@@ -280,7 +285,6 @@
                 <th><img src="http://takhinihotpools.com/media/img/10945814_314972205362986_2535773757389503556_o.jpg" width="70%"></th>
             </tr>
         </table>
-        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1941.6691646376767!2d-135.36046068434712!3d60.87897159285619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x51546f2b050d8607%3A0xd71f4bff3c8fb1a5!2sTakhini+Hot+Springs!5e0!3m2!1sen!2sca!4v1478628110261" frameborder="0" style="border:0" allowfullscreen></iframe>
     <!----- Framework ----->
 </body>
 </html>
