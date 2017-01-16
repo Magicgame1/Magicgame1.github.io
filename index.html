@@ -1,290 +1,140 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Takhini Hot Springs</title>
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <style>
-        /* color theme: #44217a, #3da077, #235784, #0d72a5, white, and #0d12a5 */
-        *{
+    <title>SS1 Technology Inc.</title>
+  <style>
+      *{
             margin: 0;
             padding: 0;
-        }
-        body {
-            font-family: sans-serif;
-        }
-        h2 {
-            font-size: 2.4em;
-            font-weight: 100;
-        }
-        p {
-            font-size: 1.6em;
-        }
-        #news_button {
-            text-decoration: none;
-            color: white;
-            border: solid double groove black 1px;
-            border-style: solid double groove;
-            padding: 4px;
-            font-size: 1.7em;
-            margin: 10px;
-            position: relative;
-            bottom: 10px;
-        }
-        #img_campground_and_hostel {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://i.cbc.ca/1.1556624.1379047164!/httpImage/image.jpg_gen/derivatives/16x9_1180/hi-takhini-hot-springs.jpg');
-            background-size: cover;
-            text-align: center;
-            padding: 10em;
-        }
-        #h_campgrounds_and_hostel {
-            color: white;
-            width: 100%;
-            top: 80px
-        }
-        .header {
-            font-size: 2.4em;
-            font-weight: 100;
-        }
-        #balzam_cafe {
-            width: 45%;
-            max-height: 200px;
-            -webkit-filter: brightness(90%);
-            filter: brightness(90%);
-            margin-left: 10px;
-        }
-        #yukon_wl_preserve {
-            width: 45%;
-            max-height: 200px;
-            margin-right: 10px;
-        }
-        #local_businesses {
-            background-color: #6bba9a;
-        }
-        #lb_paragraph {
-            margin-left: 10px;
-            margin-right: 10px;
-            text-align: center;
-        }
-        ul.img-list {
-            list-style-type: none;
-            margin: 0px;
-            padding: 0px;
-            text-align: center;
-        }
-
-        ul.img-list li {
-            display: inline-block;
-            margin: 0 1em 1em 0;
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        span.text-content {
-            background: rgba(0,0,0,0.5);
-            color: white;
-            cursor: pointer;
-            display: table;
-            left: 0;
-            position: absolute;
-            top: 0;
-        }
-
-        span.text-content span {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-        }
-        span.text-content {
-            background: rgba(0,0,0,0.5);
-            color: white;
-            cursor: pointer;
-            display: table;    
-            left: 0;
-            position: absolute;
-            top: 0;
-            opacity: 0;
-        }
-        span.text-content {
-            background: rgba(0,0,0,0.5);
-            color: white;
-            cursor: pointer;
-            display: table;
-            left: 0;
-            position: absolute;
-            top: 0;
-            opacity: 0;
-            -webkit-transition: opacity 500ms;
-            -moz-transition: opacity 500ms;
-            -o-transition: opacity 500ms;
-            transition: opacity 500ms;
-        }
-        span {
-            font-size: 1.4em;
-        }
-        #balzam_cafe_img {
-            width: 70%;
-        }
-        #teal_line {
-            background-color: #3da077;
-        }
-        #google_map {
-            float: left;
-            right: 10px;
-        }
-        #location_paragraph {
-            width: 100%;
-            color: white;
-            text-align: center;
-        }
-        #location_sec {
-            background-color: #063146;
-        }
-        #location {
-            color: white;
-        }
-
-        ul.img-list li:hover span.text-content {
-            opacity: 1;
-        }
-        #cfas_paragraph {
-            float: right;
-            width: 48%;
-            margin-right: 0px;
-            color: white;
-            text-align: center;
-        }
-        #cfas_sec{
-            background-color: #063146; 
-        }
-        #come_for_a_soak {
-            color: white;
-        }
-        #news {
-            color: white;
-        }
-        #news_sec {
-            background-color: #6bba9a;
-        }
-        #news_paragraph {
-            color: white;
-            text-align: center;
-            padding-bottom: 50px;
-        }
-        #local_businesses {
-            color: white;
-        }
-        #teal_bkgrd {
-            background-color: #6bba9a;
-        }
-        #gif {
-            width: 100%;
-        }
-        table {
-            padding: 0;
-            margin: 0;
-            background-color: #6bba9a;  
-        }
-        #gallery {
-            background-color: #6bba9a;
-            color: white;
-        }
-        #takhini_hot_springs {
-            background-color: #6bba9a;
-            color: white;
-            font-size: 5em
-        }
-        #map {
-            width: 100%;
-            min-height: 500px;
-        }
-        #time_button {
-            width: 100%;
-            font-size: 1.5em;
-            color: white;
-            text-align: center;
-            background-color: #063146;
-        }
-        #time_display {
-            width: 100%;
-            color: white;
-            text-align: center;
-            background-color: #063146;
-            font-size: 1.5em;
-        }
-    </style>    
-</head>
-<body>
-
-    <!----- Framework ----->
-    <h1 id="takhini_hot_springs"><center>Takhini Hot Springs</center></h1>
-    <img id="gif" src="http://66.media.tumblr.com/c97e72c823008b1b59ee5f691a9ceda7/tumblr_nltc33drY61rx5rfmo1_1280.gif">
-    <div id="news_sec"><h2 id="news"><center>News</center></h2>
-        <p id="news_paragraph">Come check out the new business on the property, <i><b>Yukon Escape Games</b></i>. If you are looking for a fun activity on the property then come check them out!</p><article><a id="news_button" href="http://takhinihotpools.com/news" target="blank">To Find Out More</a></article></div>
-    <div id="cfas_sec"><h2 id="come_for_a_soak"><center>Come for a Soak</center></h2>
-        <img src="http://hotspringsguide.net/wp-content/uploads/2013/11/Takhini-at-Night-300px-Photo-Courtesy-of-Takhini-Hot-Springs.jpg" width="50%%">
-        <div id="cfas_paragraph"><p>Takhini Hot Pools is one of the most visited locations in the Yukon. The hot springs have been in operation for over <b>100 years</b>. Our hot springs pools are a relaxing <i>36°</i> and <i>42°</i> Celsius, with water entering the pool at <i>47 degrees</i>. The water is natural and rich in minerals . We are open year around. Please see the menu above for our summer and winter hours. See our "Hours and Rates" section for nightly deals and specials.</p></div><br><br></div>
-        <p class="clear"></p>
-        <div id="img_campground_and_hostel">
-        <p id="h_campgrounds_and_hostel" class="header">Campgrounds and Hostel</p>
-        <br><br><br><p style="color: white;">The hostel is located only a <u>30 second walk away from the hot springs</u>. It is brand new and has only been in operation for 1 year. Our forested campground, behind the hostel, provides excellent northern lights viewing. The edge-of-the-wilderness location provides access to trails for walking, biking, snow-shoeing and cross-country skiing. All guests from the hostel and campground receive a 20% discount at the hot springs</p><br><br><br></div>
-    <div id="local_businesses"><br><h2 id="local_businesses"><center>Local Businesses</center></h2><br></div>
-        <ul class="img-list">
-            <li>
-                <a href="http://www.cafebalzam.com/">
-                    <img id="balzam_cafe_img" src="http://www.yukonwildlife.ca/Images/cafe%20balzam.png"/>
-                    <span class="text-content"><span><br><br><br>Are you hungry? <i><b>Cafe Balzam</b></i> (located beside Takhini Hot Pools) specializes in sweet and savory crepes as well as gourmet poutines; everything is organic and locally grown/raised. There is a ton of things to do in the area. See you soon!<br><br><br><br></span></span>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.cafebalzam.com/">
-                    <img id="balzam_cafe_img" src="http://www.yukoninfo.com/wp-content/uploads/2014/04/Wildlife-Preserve-Logo-with-stroke.png"/>
-                        <span class="text-content"><span><br><br><br>Want to see northern animals? Go to the <i><b>Yukon Wildlife Preserve</b></i> for guaranteed wildlife viewing; you can walk at your own pace for a self-guided tour, or take a vehicle and have a guide show you around. <br><br><br><br><br></span></span>
-                </a>
-            </li>
-        </ul>
-    <div id="teal_line"><br><br></div>
-    <div id="location_sec"><h2 id="location"><center>Location</center></h2>
-        <div id="location_paragraph"><br><p>Takhini Hot Springs is only <u>28 kilometres (18 miles)</u> from downtown <b>Whitehorse</b>. The highways taking you to the hot springs are the Alaska Highway and the North Klondike Highway. Both are paved, two-lane highways, open year  round. Takhini Hot Springs is at the end of the Hot Springs Road, 10 kilometres (6miles)from the turn off the North Klondike Highway. The trip to the hot springs from downtown Whitehorse or the Whitehorse international airport takes about 25 minutes.
-        For information on getting to Whitehorse and the Yukon, check out www.travelyukon.com</p><br><br></div>
-                <button id="time_button" type="button"
-                 onclick="document.getElementById('time_display').innerHTML = Date()">
-                Your Current Date and Time.</button>
-        <h2 id="time_display"></h2>
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1941.6691646376767!2d-135.36046068434712!3d60.87897159285619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x51546f2b050d8607%3A0xd71f4bff3c8fb1a5!2sTakhini+Hot+Springs!5e0!3m2!1sen!2sca!4v1478628110261" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script><br><br></div>
-    <h2 id="gallery"><center>Gallery</center></h2>
-        <table>
-            <tr>
-                <th><img src="http://takhinihotpools.com/media/img/DSC_0868.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/DSC_0318.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_2526.JPG" width="65%"></th>
-            </tr>
-                        <tr>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_7858.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/Morning_Breeze.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_2200.JPG" width="70%"></th>
-            </tr>
-                        <tr>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_5307.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_7941.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_9275.JPG" width="70%"></th>
-            </tr>
-                        <tr>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_9728.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/ZL2Q7890.jpg" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/ZL2Q7901.jpg" width="70%"></th>
-            </tr>
-            <tr>
-                <th><img src="http://takhinihotpools.com/media/img/ZL2Q7903.jpg" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_1691.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/IMG_3455.jpg" width="70%"></th>
-            </tr>
-            <tr>
-                <th><img src="http://takhinihotpools.com/media/img/image2.JPG" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/10426543_802877349788335_7973844611526780912_n.jpg" width="70%"></th>
-                <th><img src="http://takhinihotpools.com/media/img/10945814_314972205362986_2535773757389503556_o.jpg" width="70%"></th>
-            </tr>
-        </table>
-    <!----- Framework ----->
-</body>
+      }
+/* Navigation Bar */
+      #nav_bar {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          font-size: 1.75em;
+          overflow: hidden;
+          background-color: #0B3C5D;
+      }
+      li {
+          display: inline;
+          float: right;
+          background-color: #0B3C5D;
+          margin: 0px;
+      }
+      li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+      li a:hover {
+          background-color: #0e4a71;
+      }
+      #logo {
+          width: 10%;
+          background-color: #1D2731;
+          float: left;
+      }
+/* Navigation Bar */
+      body {
+          font-size: 14;
+          background-color: #328CC1;
+      }
+      #reporter {
+          color: white;
+          margin: 7px;
+      }
+      #date {
+          color: white;
+          margin: 7px;
+      }
+      #article_img {
+          width: 100%;
+      }
+      #news_heading {
+          font-size: 4em;
+          color: white;
+      }
+      .news_paragraph_main {
+          font-size: 1.5em;
+          color: white;
+          margin: 7px;
+          text-indent: 2em;
+      }
+/* Advertisement */
+      #ad_1 {
+          float: left;
+          margin: 10px;
+          width: 25%;
+      }
+/* Advertisement */
+       #helena {
+          font: 1em;
+          color: white;
+      }
+  </style>
+  </head>
+  <body>
+<!--- Navigation Bar --->
+        <img id="logo" src="https://logo-design.zone/wp-content/uploads/2016/04/logo-icon-2.png">
+      <ul id="nav_bar">
+        <li><a href="www.google.ca" target="_blank">Politics</a></li>
+        <li><a href="www.google.ca" target="_blank">Health</a></li>
+        <li><a href="www.google.ca" target="_blank">Money</a></li>
+        <li><a href="www.google.ca" target="_blank">Pluto</a></li>
+        <li><a href="www.google.ca" target="_blank">Venus</a></li>
+        <li><a href="www.google.ca" target="_blank">Mars</a></li>
+        <li><a href="www.google.ca" target="_blank">Local</a></li>
+        <li><a href="www.google.ca" target="_blank">Solar System</a></li>
+      </ul>
+<!--- Navigation Bar --->
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+<!--- News Heading --->
+	<h2 id="news_heading"><center>
+   	  Government has declared "Earth is a dead planet"
+    </center></h2>
+<!--- News Heading --->
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    <div id="date">
+      <p>
+      Published 22:34 MT, Thursday October 5th, 2525
+        </p></div>
+<!--- Earth Image --->
+    <img id= "article_img" src="http://img.gawkerassets.com/img/18l1abqdg8qhcjpg/ku-xlarge.jpg">
+<!--- Earth Image --->
+    <div id="reporter">
+        <p>
+      Created by Onur Prasad Randrup
+        </p></div>
+      <br>
+      <br>
+      <br>
+<!--- News Story --->
+      <p class="news_paragraph_main">
+      The Intergalactic government of Solar System One has officially declared that "Earth Prime", the original earth, is a dead and uninhabited planet. With the enormous amounts of greenhouse gases emissions that corrupt the atmosphere of "Earth Prime", it is extremely unhealthy to be living on the planet. There are still signs of living organisms on the deserted planet, but, "without proper equipment and clothing, there'll be major health risks if any human decides to live on "Earth Prime" in its current status" concluded SS1 Health and Benefits.
+    </p>
+      <br>
+    <img id="ad_1" src="http://favim.com/orig/201104/30/Favim.com-29346.jpg" alt="buylarge advertisement WALLE">
+      <p class="news_paragraph_main"> Expert analyses along with some of the greatest minds of the century have gathered at Mar's Environmental Gathering. They have concluded that with time and a couple small developments in technology with the understanding of biology, "Earth Prime" can and will be restored to the original thriving "blue world" that it once was.
+      </p>
+      <br>
+      <p class="news_paragraph_main">With the statement from the gathering, there has been a reward issued by the government towards anyone that can invent any technique/technology that can clean "Earth Prime" quickly and cost efficient. The reward number isn't stated but officials have debated it being from low numbers of 10 million upwards to possibly 500 million Solar Credits. The requirements of the invention to claim the reward are being uploaded on SS1G and SS1 Technology Inc. later during this month.</p>
+      <br>
+      <p class="news_paragraph_main">"Till further notice. 'Earth Prime' will be quarantined and any person that are below the class of Demeter, Hermes, Hephaestus, or Titan classes are forbidden to enter 'Earth Prime's' toxic atmosphere. Anyone that dares attempt to enter will be imprisoned for the act of trespassing, treason, or evasion of the law. We'll (Intergalactic Government of Solar System One) will update Solar System One of any developments."</p>
+      <p id="helena"><i>- Representative, Helena Georgina Anupama Rye, of The Intergalactic Government of Solar System One</i></p>
+<!--- News Story --->
+  </body>
 </html>
